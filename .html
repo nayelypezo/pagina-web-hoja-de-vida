@@ -1,0 +1,167 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+
+
+
+    <style>
+
+      /* Estilos globales */
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #ffc0cb; /* Fondo rosa */
+            color: #333; /* Color de texto oscuro */
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            max-width: 800px;
+            margin: 20px auto; /* Añadido un margen exterior */
+            padding: 20px;
+            border: 2px solid #333; /* Borde sólido de 2px */
+            border-radius: 20px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            background-color: #fff;  /* Fondo blanco */
+        }
+
+
+        /* Estilos para los títulos */
+        h1, h2 {
+            font-family: "Lucida Handwriting", cursive; /* Fuente de letra bonita */
+        }
+
+        /* Estilos para la sección de datos personales */
+        .personal-info {
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+        .personal-info img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* Estilos para las secciones de información */
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+        }
+        .section p {
+            margin-bottom: 5px;
+        }
+
+        /* Estilos para la sección de referencias */
+        .references {
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #ca8cbd;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Contenedor principal -->
+<div class="container">
+
+    <!-- Sección de datos personales -->
+    <div class="personal-info">
+        <img src="data:image/jpeg;base64,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" alt="Foto">
+        <h1>pezo laaz nayely amarilis </h1>
+        <p>Dirección: 15 de abril calle 324 av 217 </p>
+        <p>Teléfono: 0959575288</p>
+        <p>Email: nayelypezo568@gmail.com</p>
+        <p>Cedula :1316315819</p>
+        <p>Estado civil: soltera</p>
+        <p>Nacionalidad:ecuatoriana </p>
+        <p>Edad : 22 años </p>
+    </div>
+
+    <!-- Sección de estudios realizados -->
+    <div class="section">
+        <h2>Estudios Realizados</h2>
+        <p>Primaria:Unidad educativa "Jose maria santana salazar"</p>
+        <p>Bachiller:   Unidad educativa fiscal "Manta"
+        <p>Estudios superiores:Universidad laica Eloy Alfaro de Manabi --cursando la carrera de ingeneria en TICS</p>
+        </p>
+        <!-- Agrega más estudios si es necesario -->
+    </div>
+
+    <!-- Sección de experiencia laboral -->
+    <div class="section">
+        <h2>Experiencia Laboral</h2>
+        <p>Bordados manta : (6 meses ) asistentente de diseño grafico </p>
+        <p>Movistar: (3 meses) call center </p>
+        <!-- Agrega más experiencias laborales si es necesario -->
+    </div>
+
+    <!-- Sección de capacitaciones -->
+    <div class="section">
+        <h2>Capacitaciones</h2>
+        <p>curso basico de exel </p>
+        <p>curso basico de diseño grafico </p>
+        <!-- Agrega más capacitaciones si es necesario -->
+    </div>
+
+    <!-- Sección de referencias personales -->
+    <div class="section references">
+        <h2>Referencias Personales</h2>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Cargo/Profesión</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>lucia lopez</td>
+                <td>ingeniera</td>
+                <td>0911586312</td>
+                <td>ingenieralopez2@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td>Ana perez</td>
+                <td>doctora</td>
+                <td>0981725631</td>
+                <td>doctoraperez1@gamil.com</td>
+            </tr>
+
+
+            <tr>
+                <td> juan zambrano</td>
+                <td>licenciado </td>
+                <td>0975642356</td>
+                <td>licenciadozambrano3@gmail.com</td>
+            </tr>
+            <!-- Agrega más referencias si es necesario -->
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
